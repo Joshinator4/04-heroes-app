@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
+
+
+
 export class LayoutPageComponent {
+  urlRaiz = 'heroes';
   public sidebarItems = [
-    {label: 'Listado', icon: 'label', url:'heroes/list'},
-    {label: 'Añadir', icon: 'add', url:'heroes/new-hero'},
-    {label: 'Buscar', icon: 'search', url:'heroes/search'}
+    {label: 'Listado', icon: 'label', url:`${this.urlRaiz}/list`},
+    {label: 'Añadir', icon: 'add', url:`${this.urlRaiz}/new-hero`},
+    {label: 'Buscar', icon: 'search', url:`${this.urlRaiz}/search`}
   ]
 }
