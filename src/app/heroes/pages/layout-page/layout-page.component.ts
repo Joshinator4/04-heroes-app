@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
   ]
 })
 
-
-
 export class LayoutPageComponent {
   urlRaiz = 'heroes';
   public sidebarItems = [
