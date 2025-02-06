@@ -1,3 +1,20 @@
 <router-outlet></router-outlet>
 
-<p>list-page works!</p>
+<table border="2">
+  <thead>
+    <th>id</th>
+    <th>Super Hero</th>
+    <th>publisher</th>
+    <th>alter_ego</th>
+    <th>first_appearance</th>
+    <th>characters</th>
+  </thead>
+  <tbody *ngFor="let hero of heroes">
+    <td>{{hero.id}}</td>
+    <td>{{hero.superhero}}</td>
+    <td>{{hero.publisher}}</td>
+    <td>{{hero.alter_ego}}</td>
+    <td>{{hero.first_appearance}}</td>
+    <td>{{hero.characters}}</td>
+  </tbody>
+</table>
