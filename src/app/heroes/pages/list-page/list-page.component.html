@@ -1,6 +1,15 @@
 <router-outlet></router-outlet>
+<h1>Listado de Héroes</h1>
+<mat-divider></mat-divider>
 
-<table border="2">
+<div class="grid mb-8">
+  <div *ngFor="let hero of heroes" class="col-12 sm:col-4 md:col-3 xl:col-2">
+    <heroes-hero-card [hero]="hero"></heroes-hero-card>
+  </div>
+
+</div>
+
+<!-- <table border="2">
   <thead>
     <th>id</th>
     <th>Super Hero</th>
@@ -17,4 +26,4 @@
     <td>{{hero.first_appearance}}</td>
     <td>{{hero.characters}}</td>
   </tbody>
-</table>
+</table> -->
