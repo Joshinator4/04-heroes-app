@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Hero } from '../interfaces/hero.interfaces';
 
+
+//!Este pipe ha sido crado con ng g pipe heores/pipe/heroImage --flat --skip-tests
+
 @Pipe({
   name: 'heroImage'
 })
