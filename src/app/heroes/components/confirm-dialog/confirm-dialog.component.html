@@ -1,0 +1,10 @@
+<!-- este componente ha sido creado con:   ng g c heroes/components/confirmDialog --inline-style --skip-tests -->
+
+<h1 mat-dialog-title>¿Estás seguro?</h1>
+<div mat-dialog-content>
+  <p>Este proceso no es reversible. Si continúa eliminará a HEROE</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onConfirm()">OK</button>
+</div>

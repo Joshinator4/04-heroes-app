@@ -32,14 +32,14 @@ export class HeroesService {
 
   updateHero(hero: Hero): Observable<Hero>{
     if(!hero.id) throw Error('Hero id is required')
-    return this.httpClient.patch<Hero>(`${this.baseUrl}*heroes/${hero.id}`, hero)
+    return this.httpClient.patch<Hero>(`${this.baseUrl}/heroes/${hero.id}`, hero)
   }
 
-  deleteHeroById(id: string): Observable<boolean>{
-    return this.httpClient.delete(`${this.baseUrl}/heores/${id}`)
+  deleteHeroById(id: string): Observable<boolean> {
+    return this.httpClient.delete(`${ this.baseUrl }/heroes/${ id }`)
       .pipe(
-        map (response => true),
-        catchError(error => of(false))
+        map( response => true ),
+        catchError( error => of(false) )
       )
   }
 }

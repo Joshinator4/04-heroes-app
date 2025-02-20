@@ -1,7 +1,7 @@
 <router-outlet></router-outlet>
 <h1>
-  Editar/Añadir héroe
-  <small>Superman</small>
+  {{ currentHero.id ? 'Editar' : 'Añadir'}} héroe
+  <small *ngIf="currentHero.id">{{currentHero.superhero}}</small>
 </h1>
 
 <mat-divider class="mb-2"></mat-divider>
@@ -76,7 +76,8 @@
         <!-- </div> -->
         </form>
         <div class="flex justify-content-between">
-          <button mat-flat-button color="warn" form="heroForm">Borrar</button>
+          <button mat-flat-button color="warn" *ngIf="currentHero.id" (click)="onDeleteHero()">Borrar</button>
+          <span></span>
           <button *ngIf="heroForm.valid" mat-flat-button color="primary" type="submit" form="heroForm">Guardar</button>
         </div>
 
@@ -86,7 +87,11 @@
 
   <div class="col-12 sm:col-6">
     <mat-card>
-      <img src="" alt="Imagen del héroe" mat-card-image>
+      <img [src]="currentHero | heroImage" alt="Imagen del héroe" style="height: 550px;" mat-card-image>
     </mat-card>
   </div>
 </div>
+
+<pre>
+  {{ currentHero | json }}
+</pre>
