@@ -126,7 +126,8 @@
       "publisher": "Marvel Comics",
       "alter_ego": "Bruce Banner",
       "first_appearance": "The Incredible Hulk #1",
-      "characters": "Bruce Banner"
+      "characters": "Bruce Banner",
+      "alt_img": null
     },
     {
       "id": "marvel-wolverine",
