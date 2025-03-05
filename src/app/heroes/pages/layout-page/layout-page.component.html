@@ -28,8 +28,8 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-     <span class="spacer"></span> <!--Spacer es una clase definida en el style.css-->
-    <button mat-button>
+     <span class="spacer">{{user?.usuario}}</span> <!--Spacer es una clase definida en el style.css-->
+    <button mat-button (click)="onLogout()">
       Logout
     </button>
   </mat-toolbar>
